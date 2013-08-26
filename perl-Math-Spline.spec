@@ -1,17 +1,18 @@
 %define upstream_name    Math-Spline
-%define upstream_version 0.01
+%define upstream_version 0.02
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Cubic Spline Interpolation of data
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Math/Math-Spline-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires:	perl(Math::Derivative)
 BuildArch:	noarch
 
 %description
@@ -86,4 +87,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Mon Jan 05 2004 Guillaume Rousse <guillomovitch@mandrake.org> 0.01-1mdk
 - first mdk release
+
 
