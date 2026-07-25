@@ -2,14 +2,14 @@
 %define upstream_version 0.02
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Cubic Spline Interpolation of data
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Math/Math-Spline-%{upstream_version}.tar.gz
+Url:		https://github.com/chorny/Math-Spline
+Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Math-Spline-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
