@@ -1,15 +1,13 @@
 %define upstream_name    Math-Spline
-%define upstream_version 0.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	0.02
+Release:	5
 
 Summary:	Cubic Spline Interpolation of data
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/chorny/Math-Spline
-Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Math-Spline-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Math-Spline-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ used as an exporter of the numerical functions or, more easily as a class
 module.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -44,9 +42,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %changelog
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.10.0-1mdv2010.0
 + Revision: 403859
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.01-10mdv2009.0
+- rebuild using %0.02 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.01-10mdv2009.0
 + Revision: 257816
 - rebuild
 
